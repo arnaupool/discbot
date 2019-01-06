@@ -53,8 +53,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			case 'd': 
 				bot.sendMessage({
 					to: channelID,
-					message: "Pruebecita"})
-				bot.deleteMessage(channelID, function(error){console.log(error)});
+					message: "Pruebecita"});
+				//bot.deleteMessage({channelID:channelID, messageID:evt.d.id}, function(error){console.log(error)});
+				//bot.deleteMessage({channelID: channelID, messageID:bot.channels[channelID].last_message_id}, function(err){console.log(err)});
+				console.log(bot.channels[channelID].last_message_id)
+				bot.getMessages({channelID: channelID}, function(error, msg){console.log(msg)});
 				break;
           case 'r':                                 //Comando más fácil de teclear que el /tts predeterminado
             if (ini != -1) {
