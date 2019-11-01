@@ -13,6 +13,8 @@ var array = ["Me cago en tus muertos",
   "No tengo tiempo para esto", "Ya me he cansado, ahora mismo van dos matones "
    + "rumanos a tu casa.", "Marge, la escopeta.", "oof"
 ]
+console.log('ar-bot -- Starting bot...');
+
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(logger.transports.Console, {
